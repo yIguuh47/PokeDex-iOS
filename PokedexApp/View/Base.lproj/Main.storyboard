@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6U9-o3-Ywy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="PokedexApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="45Z-Uu-8NZ">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="10" id="3WG-4x-SAi">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="estimatedItemSize" width="100" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="24" minY="10" maxX="24" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pokemonCell" id="fBy-pD-518" customClass="PokemonCell" customModule="PokedexApp" customModuleProvider="target">
+                                        <rect key="frame" x="113" y="10" width="188" height="178"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cMd-X8-fgG">
+                                            <rect key="frame" x="0.0" y="0.0" width="188" height="178"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zzv-4k-odT">
+                                                    <rect key="frame" x="10" y="10" width="168" height="158"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokebola" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-cq-siL">
+                                                            <rect key="frame" x="10" y="10" width="148" height="114"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="139.5" id="2f8-y0-SpU"/>
+                                                                <constraint firstAttribute="width" constant="142" id="hzk-Hx-pMe"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Pokemon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-BU-TtN">
+                                                            <rect key="frame" x="10" y="126" width="148" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="0Q4-K8-rtp"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="4Hl-BU-TtN" firstAttribute="leading" secondItem="zzv-4k-odT" secondAttribute="leading" constant="10" id="9uw-7S-VLv"/>
+                                                        <constraint firstItem="4Hl-BU-TtN" firstAttribute="top" secondItem="fJo-cq-siL" secondAttribute="bottom" constant="2" id="BI9-VR-TW5"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Hl-BU-TtN" secondAttribute="trailing" constant="10" id="XaA-xW-oPh"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fJo-cq-siL" secondAttribute="trailing" constant="10" id="XpM-WJ-T6L"/>
+                                                        <constraint firstItem="fJo-cq-siL" firstAttribute="leading" secondItem="zzv-4k-odT" secondAttribute="leading" constant="10" id="kB8-by-Kpn"/>
+                                                        <constraint firstItem="fJo-cq-siL" firstAttribute="top" secondItem="zzv-4k-odT" secondAttribute="top" constant="10" id="vW6-IP-Pus"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4Hl-BU-TtN" secondAttribute="bottom" id="zdV-eG-vk2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zzv-4k-odT" firstAttribute="leading" secondItem="cMd-X8-fgG" secondAttribute="leading" constant="10" id="BXn-kt-rHP"/>
+                                                <constraint firstItem="zzv-4k-odT" firstAttribute="top" secondItem="cMd-X8-fgG" secondAttribute="top" constant="10" id="Lyg-n7-bgv"/>
+                                                <constraint firstAttribute="trailing" secondItem="zzv-4k-odT" secondAttribute="trailing" constant="10" id="S4M-Lr-Kzh"/>
+                                                <constraint firstAttribute="bottom" secondItem="zzv-4k-odT" secondAttribute="bottom" constant="10" id="Tk7-6p-a7a"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="188" height="178"/>
+                                        <connections>
+                                            <outlet property="pokemonImageView" destination="fJo-cq-siL" id="6j4-ka-X42"/>
+                                            <outlet property="pokemonTextField" destination="4Hl-BU-TtN" id="Bdq-kj-ymG"/>
+                                            <outlet property="pokemonView" destination="zzv-4k-odT" id="LWw-ue-3gF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="45Z-Uu-8NZ" secondAttribute="trailing" id="2u2-1u-YgA"/>
+                            <constraint firstItem="45Z-Uu-8NZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7QO-g6-fny"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="45Z-Uu-8NZ" secondAttribute="bottom" id="8NC-IK-hma"/>
+                            <constraint firstItem="45Z-Uu-8NZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m13-ne-ehx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A5R-Um-jJn"/>
+                    <connections>
+                        <outlet property="pokemonCollectionView" destination="45Z-Uu-8NZ" id="2cG-TY-2LD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.0000000000001" y="124.55357142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UI4-Vi-1I6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6U9-o3-Ywy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hU3-KY-RxS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cer-J0-bDr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bca-Y4-YPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89.855072463768124" y="124.55357142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pokebola" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
