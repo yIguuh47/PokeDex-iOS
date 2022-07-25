@@ -1,21 +1,21 @@
 //
-//  RequestImagePokemons.swift
+//  RequestTypePokemons.swift
 //  PokedexApp
 //
-//  Created by Virtual Machine on 13/07/22.
+//  Created by Virtual Machine on 14/07/22.
 //
 
 import Foundation
 
-protocol RequestImageDelegate: NSObjectProtocol {
-    func didConvertImageUrl(url: ImagePokemon)
+protocol RequestTypeDelegate: NSObjectProtocol {
+    func didTypePokemon(type: [TypePokemon])
 }
 
-class RequestImagePokemons {
+class RequestTypePokemons {
     
-    var delegateImage: RequestImageDelegate?
+    var delegateType: RequestTypeDelegate?
     
-    func getImagePokemons(url: String) {
+    func getTypePokemons(url: String) {
         
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = "GET"
@@ -39,8 +39,8 @@ class RequestImagePokemons {
             
             if let safeData = data {
                 
-                if let image = self.parseJSONImage(listData: safeData) {
-                    self.delegateImage?.didConvertImageUrl(url: image)
+                if let type = self.parseJSONType(listData: safeData) {
+                    self.delegateType?.didTypePokemon(type: type)
                     return
                 } else {
                     return
@@ -50,11 +50,11 @@ class RequestImagePokemons {
         tarefa.resume()
     }
     
-    func parseJSONImage(listData: Data) -> ImagePokemon? {
+    func parseJSONType(listData: Data) -> [TypePokemon]? {
         let decoder = JSONDecoder()
         do {
             let decoderData =  try decoder.decode(PokemonDethails.self, from: listData)
-            let results = decoderData.sprites
+            let results = decoderData.types
             return results
         } catch {
             print("Erro Decoder \(error)")

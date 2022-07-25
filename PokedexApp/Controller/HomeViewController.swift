@@ -18,13 +18,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+                
         pokemonCollectionView.delegate = self
         pokemonCollectionView.dataSource = self
         
         requestList.delegateList = self
         requestList.getListPokemons()
     }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, RequestListPokemonsDelegate {
@@ -51,6 +52,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         cell.pokemonTextField.text = pokemon.name
         cell.setupImageView(url: pokemon.url)
+        cell.setupTypeView(url: pokemon.url)
         
         return cell
     }

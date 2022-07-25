@@ -39,31 +39,31 @@
                                                     <rect key="frame" x="10" y="10" width="168" height="158"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokebola" translatesAutoresizingMaskIntoConstraints="NO" id="fJo-cq-siL">
-                                                            <rect key="frame" x="10" y="10" width="148" height="114"/>
+                                                            <rect key="frame" x="10" y="10" width="148" height="104"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="139.5" id="2f8-y0-SpU"/>
                                                                 <constraint firstAttribute="width" constant="142" id="hzk-Hx-pMe"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Pokemon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-BU-TtN">
-                                                            <rect key="frame" x="10" y="126" width="148" height="32"/>
+                                                            <rect key="frame" x="10" y="116" width="148" height="32"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="32" id="0Q4-K8-rtp"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="4Hl-BU-TtN" firstAttribute="leading" secondItem="zzv-4k-odT" secondAttribute="leading" constant="10" id="9uw-7S-VLv"/>
                                                         <constraint firstItem="4Hl-BU-TtN" firstAttribute="top" secondItem="fJo-cq-siL" secondAttribute="bottom" constant="2" id="BI9-VR-TW5"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4Hl-BU-TtN" secondAttribute="bottom" constant="10" id="Jgk-cn-ocN"/>
                                                         <constraint firstAttribute="trailing" secondItem="4Hl-BU-TtN" secondAttribute="trailing" constant="10" id="XaA-xW-oPh"/>
                                                         <constraint firstAttribute="trailing" secondItem="fJo-cq-siL" secondAttribute="trailing" constant="10" id="XpM-WJ-T6L"/>
                                                         <constraint firstItem="fJo-cq-siL" firstAttribute="leading" secondItem="zzv-4k-odT" secondAttribute="leading" constant="10" id="kB8-by-Kpn"/>
                                                         <constraint firstItem="fJo-cq-siL" firstAttribute="top" secondItem="zzv-4k-odT" secondAttribute="top" constant="10" id="vW6-IP-Pus"/>
-                                                        <constraint firstAttribute="bottom" secondItem="4Hl-BU-TtN" secondAttribute="bottom" id="zdV-eG-vk2"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>

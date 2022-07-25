@@ -14,7 +14,7 @@ protocol RequestListPokemonsDelegate: NSObjectProtocol {
 class RequestListPokemons {
     
     var delegateList: RequestListPokemonsDelegate?
-    let url = "https://pokeapi.co/api/v2/pokemon/?limit=20"
+    let url = "https://pokeapi.co/api/v2/pokemon/?limit=100"
     
     func getListPokemons() {
         
